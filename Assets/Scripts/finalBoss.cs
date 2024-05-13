@@ -1,20 +1,22 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class finalBoss : MonoBehaviour
 {
-	public GameObject slime;
+    [SerializeField] private GameObject slime;
+    [SerializeField] private GameObject chasi;
+    [SerializeField] private AudioSource chasiAudio;
+    private bool _isKillBoss = true;
 
-	private void Start()
-	{
-	}
-
-	private void Update()
-	{
-		if (!slime)
-		{
-			Cursor.lockState = CursorLockMode.None;
-			SceneManager.LoadScene("sliderFinal");
-		}
-	}
+    private void Start()
+    {
+        chasiAudio = GameObject.Find("Chasi").GetComponent<AudioSource>();
+    }
+    private void Update()
+    {
+        if (slime == null)
+        {
+            chasi.SetActive(true);
+            chasiAudio.Play();
+        }
+    }
 }

@@ -10,6 +10,6 @@ public class schotchik : MonoBehaviour
 	private void Update()
 	{
 		PlayerPrefs.SetInt("EnemyCount", Schotchik_value);
-		Vuvod.text = "Монстров убито: " + Schotchik_value + " /9";
+		Vuvod.text = "Счёт: " + Schotchik_value;
 	}
 }

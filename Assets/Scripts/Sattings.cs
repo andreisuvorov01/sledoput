@@ -9,8 +9,9 @@ public class Sattings : MonoBehaviour
 	public Dropdown qualityDropdown;
 
 	public GameObject Setting_panel;
+    public GameObject MainMenu_panel;
 
-	public Slider soundVolium;
+    public Slider soundVolium;
 
 	private Resolution[] resolutions;
 
@@ -56,28 +57,21 @@ public class Sattings : MonoBehaviour
 		Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 	}
 
-	public void SetSensitivitySettings()
-	{
-	}
-
 	public void SetQuality(int qualityIndex)
 	{
 		QualitySettings.SetQualityLevel(qualityIndex);
-	}
-
-	public void SoundValue(float soundVoliumFloat)
-	{
-		PlayerPrefs.SetFloat("playerListenerSettings", soundVoliumFloat);
-		AudioListener.volume = soundVoliumFloat;
 	}
 
 	public void SaveSettings()
 	{
 		PlayerPrefs.SetInt("QualitySetingsValue", qualityDropdown.value);
 		PlayerPrefs.SetInt("resolusionSetingsValue", resolusionDropdown.value);
-		restartSettings = true;
-		Setting_panel.SetActive(value: false);
-	}
+		PlayerPrefs.SetFloat("playerListenerSettings", soundVolium.value);
+		AudioListener.volume = soundVolium.value;
+        restartSettings = true;
+        MainMenu_panel.SetActive(true);
+        Setting_panel.SetActive(false);
+    }
 
 	public void LoadSettings(int currentResalutionsIndex)
 	{

@@ -4,8 +4,12 @@ public class LookAtPlayer : MonoBehaviour
 {
 	public Transform cam;
 
-	private void LateUpdate()
+    private void Start()
+    {
+        cam = GameObject.Find("PlayerCamera").transform;
+    }
+    private void LateUpdate()
 	{
-		base.transform.LookAt(cam);
+		transform.LookAt(cam);
 	}
 }

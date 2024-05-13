@@ -14,12 +14,15 @@ public class Weapon : MonoBehaviour
 
 	public int Damage = 10;
 
+	[SerializeField] private AudioSource shootAudio;
+
 	private void Update()
 	{
 		if (Input.GetButtonDown("Fire1"))
 		{
 			Shoot();
-		}
+			shootAudio.Play();
+        }
 	}
 
 	private void OnTriggerEnter(Collider other)
