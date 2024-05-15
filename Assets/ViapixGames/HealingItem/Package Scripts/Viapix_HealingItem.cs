@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Viapix_PlayerParams;
 
 namespace Viapix_HealingItem
 {
@@ -29,9 +26,11 @@ namespace Viapix_HealingItem
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                playerObj.GetComponent<health>().HP += healingAmount;
-
-                Destroy(gameObject);
+                if (collision.transform.GetComponent<health>().HP < 100)
+                {
+                    playerObj.GetComponent<health>().HP += healingAmount;
+                    Destroy(gameObject);
+                }
             }
         }
     }

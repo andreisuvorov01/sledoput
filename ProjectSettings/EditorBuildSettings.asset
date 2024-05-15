@@ -16,15 +16,15 @@ EditorBuildSettings:
     guid: de87c8187207e1548bc1c19d79aa27d7
   - enabled: 1
     path: Assets/Scenes/HistoryTwoLevels.unity
-    guid: 8baf60f6aea991345b1455cf322a1337
+    guid: 98478e420698c314fa38711df4ba211b
   - enabled: 1
     path: Assets/Scenes/GameLevel2.unity
     guid: e51aa82655b68604aa4fe0d1fca074e3
   - enabled: 1
-    path: Assets/Scenes/EndGame.unity
-    guid: b7615d35ae9715542b73794bddaf6f15
-  - enabled: 1
     path: Assets/Scenes/SuccesGame.unity
     guid: d901ca77f4340d34ba0bbbe42720fad1
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: b7615d35ae9715542b73794bddaf6f15
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

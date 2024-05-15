@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 7362721255072901404}
   m_Layer: 0
   m_Name: Healing Item
-  m_TagString: Untagged
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,4 +217,4 @@ MonoBehaviour:
   rotationSpeedX: 0
   rotationSpeedY: 0.5
   rotationSpeedZ: 0
-  healingAmount: 5
+  healingAmount: 20

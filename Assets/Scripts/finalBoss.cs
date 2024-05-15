@@ -10,13 +10,16 @@ public class finalBoss : MonoBehaviour
     private void Start()
     {
         chasiAudio = GameObject.Find("Chasi").GetComponent<AudioSource>();
+        chasiAudio.volume = 0.0f;
     }
     private void Update()
     {
         if (slime == null)
         {
             chasi.SetActive(true);
-            chasiAudio.Play();
+            _isKillBoss = false;
+            chasiAudio.volume = 1.0f;
         }
+        if (_isKillBoss) chasiAudio.Play();
     }
 }
