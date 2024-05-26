@@ -561,6 +561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 5
   follow: {fileID: 0}
+  _audiokusiEnemy: {fileID: 0}
 --- !u!1 &1765874445886973700
 GameObject:
   m_ObjectHideFlags: 0

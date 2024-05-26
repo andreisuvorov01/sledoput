@@ -16,7 +16,7 @@ public class CameraManager : MonoBehaviour
                 {
                     var numberScene = SceneManager.GetActiveScene().buildIndex;
                     if(numberScene ==2 )SceneManager.LoadScene(3);
-                    else if(numberScene ==4 )SceneManager.LoadScene(5);
+                    else if(numberScene ==4 )SceneManager.LoadScene(7);
                     Cursor.lockState = CursorLockMode.None;
                 }
             }
